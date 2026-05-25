@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Atendimento psicológico online e presencial em Salvador. Ansiedade, depressão, relacionamentos e autoconhecimento."
+    >
+
+    <meta
+    name="keywords"
+    content="psicólogo Salvador, psicoterapia online, ansiedade, depressão, psicanálise, terapia online Salvador"
+/>
+
+    <title>
+    Saúde Mental Psicologia | Psicólogo Online e Presencial em Salvador
+    </title>
+
+    <link
+        rel="icon"
+        href="{{ url_for('static', filename='favicon.ico') }}"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="chat-container">
+
+        <div class="chat-header">
+
+    🧠 Saúde Mental Psicologia
+
+    <a
+    href="/limpar"
+    class="limpar-chat"
+>
+    🔄 Nova Conversa
+</a>
+
+</div>
+
+<div class="subtitulo">
+
+    Psicoterapia Online e Presencial em Salvador - BA
+
+</div>
+
+        <div class="chat-body">
+
+<div class="atalhos">
+
+    <form method="POST">
+        <button type="submit" name="pergunta"
+            value="O que é ansiedade?">
+            😟 Ansiedade
+        </button>
+    </form>
+
+    <form method="POST">
+        <button type="submit" name="pergunta"
+            value="O que é depressão?">
+            😔 Depressão
+        </button>
+    </form>
+
+    <form method="POST">
+        <button type="submit" name="pergunta"
+            value="Como funciona a psicoterapia?">
+            🧠 Psicoterapia
+        </button>
+    </form>
+
+    <form method="POST">
+        <button type="submit" name="pergunta"
+            value="Vocês atendem online?">
+            💻 Atendimento Online
+        </button>
+    </form>
+
+    <form method="POST">
+        <button type="submit" name="pergunta"
+            value="Vocês atendem presencialmente?">
+            🏢 Atendimento Presencial
+        </button>
+    </form>
+
+    <form method="POST">
+        <button type="submit" name="pergunta"
+            value="Como faço para agendar uma consulta?">
+            📅 Agendar Consulta
+        </button>
+    </form>
+
+<div class="whatsapp-container">
+
+    <a
+    href="https://wa.me/5571981682755?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20atendimento."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="botao-whatsapp"
+>
+        📞 Falar no WhatsApp
+    </a>
+
+    {% if mostrar_botao_lead %}
+
+<a
+href="/atendimento"
+class="botao-atendimento">
+
+📅 Solicitar Atendimento
+
+</a>
+
+{% endif %}
+
+</div>
+
+</div>
+
+            {% for mensagem in conversa %}
+
+    <div class="mensagem {{ mensagem.tipo }}">
+
+        {% if mensagem.tipo == "usuario" %}
+
+            <strong>Você:</strong><br>
+
+        {% else %}
+
+            <strong>Assistente:</strong><br>
+
+        {% endif %}
+
+        {{ mensagem.texto|replace('\n', '<br>')|safe }}
+
+    </div>
+
+{% endfor %}
+
+        </div>
+
+        <div class="chat-footer">
+
+            <form method="POST">
+
+    <label
+        for="pergunta"
+        class="sr-only"
+    >
+        Digite sua mensagem
+    </label>
+
+    <input
+        id="pergunta"
+        type="text"
+        name="pergunta"
+        placeholder="Digite sua mensagem..."
+        maxlength="500"
+        autocomplete="off"
+        required
+    >
+
+    <button type="submit">
+
+        Enviar
+
+    </button>
+
+</form>
+
+        </div>
+
+    </div>
+
+<script>
+
+window.onload = function() {
+
+    const chatBody =
+        document.querySelector(".chat-body");
+
+    if(chatBody){
+
+        chatBody.scrollTop =
+            chatBody.scrollHeight;
+
+    }
+
+};
+
+</script>
+
+</body>
+
+</html>

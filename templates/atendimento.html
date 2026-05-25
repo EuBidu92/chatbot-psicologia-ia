@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Solicitar Atendimento</title>
+
+<style>
+
+body{
+
+    font-family: Arial, sans-serif;
+
+    background:#f4f6f9;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100vh;
+
+}
+
+.container{
+
+    background:white;
+
+    width:500px;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 20px rgba(0,0,0,.1);
+
+}
+
+h2{
+
+    text-align:center;
+
+}
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:5px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    box-sizing:border-box;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#1e88e5;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+button:hover{
+
+    background:#1565c0;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>
+
+Solicitar Atendimento
+
+</h2>
+
+<form action="/salvar_lead" method="POST">
+
+    <input
+        type="text"
+        name="nome"
+        placeholder="Seu nome"
+        required
+    >
+
+    <input
+        type="text"
+        name="whatsapp"
+        placeholder="WhatsApp"
+        required
+    >
+
+    <input
+        type="email"
+        name="email"
+        placeholder="E-mail"
+    >
+
+    <textarea
+        name="motivo"
+        placeholder="Como podemos ajudar?"
+        rows="4"
+    ></textarea>
+
+    <label>Modalidade desejada:</label>
+
+    <select name="preferencia">
+
+        <option value="Online">
+            Online
+        </option>
+
+        <option value="Presencial">
+            Presencial
+        </option>
+
+        <option value="Tanto faz">
+            Tanto faz
+        </option>
+
+    </select>
+
+    <label>Melhor horário:</label>
+
+    <select name="periodo">
+
+        <option value="Manhã">
+            Manhã
+        </option>
+
+        <option value="Tarde">
+            Tarde
+        </option>
+
+        <option value="Noite">
+            Noite
+        </option>
+
+    </select>
+
+    <button type="submit">
+
+        Solicitar Atendimento
+
+    </button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

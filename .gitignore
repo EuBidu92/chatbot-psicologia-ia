@@ -1,0 +1,8 @@
+.env
+venv/
+__pycache__/
+config.py
+historico.txt
+leads.csv
+*.pyc
+.vscode/

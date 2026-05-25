@@ -1,0 +1,272 @@
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f6f9;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+
+}
+
+.chat-container {
+
+    width: 900px;
+
+    max-width: 95%;
+
+    height: 85vh;
+}
+
+.chat-header {
+
+    background: linear-gradient(
+        135deg,
+        #1e88e5,
+        #1565c0
+    );
+
+    color: white;
+
+    padding: 18px 25px;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+.chat-body {
+
+    flex: 1;
+
+    padding: 15px;
+
+    overflow-y: auto;
+
+    background: #f8f9fb;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.mensagem {
+
+    max-width: 80%;
+
+    padding: 14px;
+
+    border-radius: 18px;
+
+    white-space: pre-line;
+
+    line-height: 1.5;
+
+    word-wrap: break-word;
+}
+
+.usuario {
+
+    align-self: flex-end;
+
+    background: #d8ebff;
+
+    border-bottom-right-radius: 5px;
+}
+
+.bot {
+
+    align-self: flex-start;
+
+    background: white;
+
+    border: 1px solid #e5e5e5;
+
+    border-bottom-left-radius: 5px;
+}
+
+.chat-footer {
+
+    padding: 15px;
+
+    border-top: 1px solid #ddd;
+
+}
+
+.chat-footer form {
+
+    display: flex;
+
+}
+
+.chat-footer input {
+
+    flex: 1;
+
+    padding: 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.chat-footer button {
+
+    margin-left: 10px;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #1e88e5;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+}
+
+.chat-footer button:hover {
+
+    background: #1565c0;
+
+}
+
+.limpar-chat {
+
+    float: right;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    background: rgba(255,255,255,0.2);
+
+    padding: 6px 12px;
+
+    border-radius: 6px;
+
+}
+
+.atalhos button {
+
+    border: none;
+
+    border-radius: 20px;
+
+    padding: 8px 14px;
+
+    font-size: 14px;
+
+    background: #edf2f7;
+
+    cursor: pointer;
+}
+
+.atalhos form {
+
+    margin: 0;
+}
+
+.atalhos button {
+
+    border: none;
+
+    border-radius: 20px;
+
+    padding: 10px 15px;
+
+    cursor: pointer;
+
+    background: #e8f1ff;
+
+    transition: 0.3s;
+}
+
+.atalhos button:hover {
+
+    background: #cfe2ff;
+}
+
+.whatsapp-container {
+
+    margin-bottom: 20px;
+
+}
+
+.botao-whatsapp {
+
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    text-decoration: none;
+
+    background: #25D366;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.botao-whatsapp:hover {
+
+    opacity: 0.9;
+
+}
+
+.botao-atendimento {
+
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    text-decoration: none;
+
+    background: #1e88e5;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-left: 10px;
+
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
